@@ -1,0 +1,90 @@
+.container{
+    display: flexbox;
+    display: block;
+}
+
+#login{
+    height: 100vh;
+}
+
+#login #imgLogin{
+  display: block;
+  margin: auto;
+  padding: 20%;
+  
+}
+
+#login #titulologin{
+    text-align: center;
+    letter-spacing: 0px;
+    color: #00A0E6;
+    opacity: 1;
+    font-family: 'pacifico', cursive;
+    font-size: 54px;
+}
+#info{
+    background: transparent  url('src\assets\fondoPrueba.png' ) 0% 0% no-repeat padding-box;
+    background-size: 100% 100% ;
+    height: 140vh;
+
+}
+#mover{
+    padding-left: 30px;
+    padding-top: 100px;
+}
+.parrafo p span a{
+    color: #00A0E6;
+    font-family: 'pacifico', cursive;
+    text-decoration: none;
+}
+
+.bienvenido p{
+    text-align: left;
+    font-size: 54px;
+    font-family:'Roboto';
+    letter-spacing: 0px;
+    color: #222222;
+    font: bold;
+    opacity: 1;
+}
+.parrafo{
+text-align: left;
+font-size: 20px;
+font-family:'Roboto';
+letter-spacing: 0px;
+color: #222222;
+}
+
+#frm{
+    padding: 10px;
+}
+
+#olvide a{
+    color: black;
+}
+#olvide{
+    text-align: right;
+}
+
+button{
+    margin-bottom: 30px;
+    background: #1AA0E6;
+    border: 1px solid #1AA0E6;
+     
+}
+button a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+.footer p{
+    text-align: center;
+}
+.footer #uno{
+    margin-left: 40%;
+}
+.footer #dos{
+
+ margin-left: 5%;
+}

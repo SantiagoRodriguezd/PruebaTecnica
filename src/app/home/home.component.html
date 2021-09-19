@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #dad2bd;">
+  <div class="container">
+
+    <a class="navbar-brand" href="http://localhost:4200/home">Contactame</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="d-flex">
+      <button type="button" (click)="clickAgregarUsuario()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Agregar Usuario
+      </button>
+    </div>
+
+  </div>
+
+</nav>
+
+<div class="row">
+  <div class="col-md-12 mt-12">
+
+    <table class="table mt-3">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Avatar</th>
+          <th>Nombre Completo</th>
+          <th>Email</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{usuario.id}}</td>
+          <td><img [src]="usuario.avatar" alt=""></td> 
+          <td>{{usuario.first_name}} {{usuario.last_name}}</td>
+          <td>{{usuario.email}}</td>
+          <td>
+            <button class="btn btn-info" (click)="editarUsuario(usuario)" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</button>
+            <button class="btn btn-danger mx-3" (click)="eliminarUsuario(usuario)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Detalles Usuario</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form [formGroup]="formValue">
+
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre</label>
+              <input type="text" formControlName="first_name" class="form-control" >
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Apellido</label>
+              <input type="text" formControlName="last_name" class="form-control" >
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Email</label>
+              <input type="email" formControlName="email" class="form-control" >
+            </div>            
+
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" *ngIf="showUsuario" class="btn btn-primary" (click)="postDetallesUsuario()">Agregar</button>
+          <button type="button" *ngIf="showActualizar" class="btn btn-success" (click)="actualizarUsuario()">Actualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
