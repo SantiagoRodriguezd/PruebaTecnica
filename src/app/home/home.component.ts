@@ -61,6 +61,7 @@ export class HomeComponent implements OnInit {
     this.api.getUsuario()
     .subscribe(res=>{
       this.usuarios = res.data;
+      alert('Usuarios listados')
     })
   }
 
@@ -79,6 +80,7 @@ export class HomeComponent implements OnInit {
     this.formValue.controls['first_name'].setValue(usuario.first_name)
     this.formValue.controls['last_name'].setValue(usuario.last_name)
     this.formValue.controls['email'].setValue(usuario.email)
+    
   }
 
   actualizarUsuario(){
@@ -93,6 +95,7 @@ export class HomeComponent implements OnInit {
       ref?.click();
       this.formValue.reset();
       this.getTodoUsuario();
+      
     })
   }
 }
