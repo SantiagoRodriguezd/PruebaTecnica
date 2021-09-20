@@ -23,7 +23,7 @@
     font-size: 54px;
 }
 #info{
-    background: transparent  url('src\assets\fondoPrueba.png' ) 0% 0% no-repeat padding-box;
+    background: transparent  url('https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:87ac6dbc-26c8-4c3a-ae73-9316277be981;revision=0?component_id=bf238b73-7284-44b3-a510-6681cdd46b04&api_key=CometServer1&access_token=1632153873_urn%3Aaaid%3Asc%3AUS%3A87ac6dbc-26c8-4c3a-ae73-9316277be981%3Bpublic_57562f582c9c02af22dbb48f4083f3310449d113') 0% 0% no-repeat padding-box;
     background-size: 100% 100% ;
     height: 140vh;
 

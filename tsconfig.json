@@ -3,7 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "strictPropertyInitialization": false,
-    "baseUrl": "./",
+    "baseUrl": "./login",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
